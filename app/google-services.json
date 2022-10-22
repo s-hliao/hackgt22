@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "775760202275",
+    "project_id": "hackgt22",
+    "storage_bucket": "hackgt22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:775760202275:android:fcba1b4bd16c3660aeff96",
+        "android_client_info": {
+          "package_name": "com.example.hackgt22"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "775760202275-buolehtenee248da6objqofjg25s4fd3.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.hackgt22",
+            "certificate_hash": "75a3a989b235aecb701ef864f653d4a721c41df5"
+          }
+        },
+        {
+          "client_id": "775760202275-2s5rl55pkah6iq5esfe44adra3svk72q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAc2rtmJ_0N9Z6osjRSo5Wd_eGebhVnvHI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "775760202275-2s5rl55pkah6iq5esfe44adra3svk72q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

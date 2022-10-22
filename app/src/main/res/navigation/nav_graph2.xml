@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph2"
+    app:startDestination="@id/LandingFragment">
+
+    <fragment
+        android:id="@+id/LandingFragment"
+        android:name="com.example.hackgt22.LandingFragment"
+        android:label="@string/first_fragment_label"
+        tools:layout="@layout/fragment_landing">
+
+        <action
+            android:id="@+id/action_First2Fragment_to_Second2Fragment"
+            app:destination="@id/SignInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/SignInFragment"
+        android:name="com.example.hackgt22.Second2Fragment"
+        android:label="SignInFragment"
+        tools:layout="@layout/fragment_signin">
+    </fragment>
+</navigation>
