@@ -1,9 +1,12 @@
 package com.example.hackgt22.util;
 
+import android.content.Intent;
+
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hackgt22.AuthActivity;
+import com.example.hackgt22.MainActivity;
 import com.example.hackgt22.model.DatabaseUser;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -67,22 +70,16 @@ public class ThisUser{
                     if (task.isSuccessful()) {
                         DocumentSnapshot document = task.getResult();
 
-                        // If the user exists in firebase
-                        if (document.exists()) {
-
-                                thisActivity.startActivity(MainActivity.createIntent(thisActivity.getApplicationContext(), null));
-                                thisActivity.finish();
-                        }
-
-                        // If the user doesn't exist
-                        else {
-
-                            // Add the user to the database
+                        // If the user doesn't exist in firebase
+                        if (!document.exists()) {
                             usersCollection.document(user.getUid()).set(new DatabaseUser(
                                     user.getDisplayName()
                             ));
 
                         }
+
+                        thisActivity.startActivity(new Intent(thisActivity.getApplicationContext(), MainActivity.class));
+                        thisActivity.finish();
                     }
                 }
             });
@@ -90,7 +87,7 @@ public class ThisUser{
 
         // If a user is not signed in, show the auth ui activity
         else {
-            thisActivity.startActivity(AuthActivity.createIntent(thisActivity.getApplicationContext()));
+            thisActivity.startActivity(new Intent(thisActivity.getApplicationContext(), AuthActivity.class));
             thisActivity.finish();
         }
     }

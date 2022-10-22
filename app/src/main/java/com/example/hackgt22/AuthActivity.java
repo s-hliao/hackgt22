@@ -3,6 +3,9 @@ package com.example.hackgt22;
 import android.content.Intent;
 import android.os.Bundle;
 
+import com.example.hackgt22.util.ThisUser;
+import com.facebook.FacebookSdk;
+import com.facebook.appevents.AppEventsLogger;
 import com.firebase.ui.auth.FirebaseAuthUIActivityResultContract;
 import com.firebase.ui.auth.IdpResponse;
 import com.firebase.ui.auth.data.model.FirebaseAuthUIAuthenticationResult;
@@ -49,10 +52,11 @@ public class AuthActivity extends AppCompatActivity {
         appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
 
+
         providers = Arrays.asList(
                 new AuthUI.IdpConfig.EmailBuilder().build(),
-                new AuthUI.IdpConfig.GoogleBuilder().build(),
-                new AuthUI.IdpConfig.FacebookBuilder().build()
+                new AuthUI.IdpConfig.GoogleBuilder().build()
+               // new AuthUI.IdpConfig.FacebookBuilder().build()
         );
 
         Intent signInIntent = AuthUI.getInstance()
@@ -79,8 +83,7 @@ public class AuthActivity extends AppCompatActivity {
         IdpResponse response = result.getIdpResponse();
         if (result.getResultCode() == RESULT_OK) {
             FirebaseUser user = FirebaseAuth.getInstance().getCurrentUser();
-        } else {
-
+            ThisUser.redirect(this);
         }
     }
 
