@@ -3,6 +3,8 @@ package com.example.hackgt22.util;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.hackgt22.AuthActivity;
+import com.example.hackgt22.model.DatabaseUser;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.FirebaseAuth;
@@ -17,7 +19,7 @@ import javax.annotation.Signed;
 
 
 public class ThisUser{
-/*
+
     private FirebaseFirestore fireStore;
 
     private static String uid;
@@ -88,9 +90,9 @@ public class ThisUser{
 
         // If a user is not signed in, show the auth ui activity
         else {
-            thisActivity.startActivity(AuthUiActivity.createIntent(thisActivity.getApplicationContext()));
+            thisActivity.startActivity(AuthActivity.createIntent(thisActivity.getApplicationContext()));
             thisActivity.finish();
         }
-    }*/
+    }
 }
 
