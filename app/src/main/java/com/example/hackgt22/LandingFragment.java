@@ -1,19 +1,21 @@
 package com.example.hackgt22;
 
 import android.os.Bundle;
+import android.text.method.LinkMovementMethod;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.TextView;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
-import com.example.hackgt22.databinding.FragmentFirst2Binding;
+import com.example.hackgt22.databinding.FragmentLandingBinding;
 
 public class LandingFragment extends Fragment {
 
-    private FragmentFirst2Binding binding;
+    private FragmentLandingBinding binding;
 
     @Override
     public View onCreateView(
@@ -21,9 +23,9 @@ public class LandingFragment extends Fragment {
             Bundle savedInstanceState
     ) {
 
-        binding = FragmentFirst2Binding.inflate(inflater, container, false);
+        binding = FragmentLandingBinding.inflate(inflater, container, false);
+        binding.termsOfUse.setMovementMethod(LinkMovementMethod.getInstance());
         return binding.getRoot();
-
     }
 
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
@@ -33,7 +35,7 @@ public class LandingFragment extends Fragment {
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(LandingFragment.this)
-                        .navigate(R.id.action_First2Fragment_to_Second2Fragment);
+                        .navigate(R.id.action_LandingFragment_to_SigninFragment);
             }
         });
     }

@@ -8,16 +8,16 @@
     <fragment
         android:id="@+id/LandingFragment"
         android:name="com.example.hackgt22.LandingFragment"
-        android:label="@string/first_fragment_label"
+        android:label="LandingFragment"
         tools:layout="@layout/fragment_landing">
 
         <action
-            android:id="@+id/action_First2Fragment_to_Second2Fragment"
+            android:id="@+id/action_LandingFragment_to_SigninFragment"
             app:destination="@id/SignInFragment" />
     </fragment>
     <fragment
         android:id="@+id/SignInFragment"
-        android:name="com.example.hackgt22.Second2Fragment"
+        android:name="com.example.hackgt22.SigninFragment"
         android:label="SignInFragment"
         tools:layout="@layout/fragment_signin">
     </fragment>
