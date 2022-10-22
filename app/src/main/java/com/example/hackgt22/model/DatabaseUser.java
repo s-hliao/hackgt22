@@ -7,76 +7,43 @@ import java.util.HashMap;
 public class DatabaseUser {
 
     public static final String FIELD_NAME = "name";
-    public static final String FIELD_INCHAPTER = "inChapter";
-    public static final String FIELD_ISADMIN = "isAdmin";
-    public static final String FIELD_CHAPTERNAME = "chapterName";
-    public static final String FIELD_CHAPTEREVENTS = "chapterEvents";
-    public static final String FIELD_COMPETITIVEEVENTS = "competitiveEvents";
+    public static final String FIELD_FARMS = "farms";
+    public static final String FIELD_RESERVOIRS = "reservoirs";
 
     private String name;
-    private Boolean inChapter;
-    private Boolean isAdmin;
-    private String chapterName;
-    private HashMap<String, Integer> chapterEvents;
-    private HashMap<String, Integer> competitiveEvents;
+    private HashMap<Integer, Integer> farms;
+    private HashMap<Integer, Integer> reservoirs;
 
     public DatabaseUser() {}
 
-    public DatabaseUser(String name, boolean inChapter, boolean isAdmin, String chapterName) {
+    public DatabaseUser(String name) {
         this.name = name;
-        this.inChapter = inChapter;
-        this.isAdmin = isAdmin;
-        this.chapterName = chapterName;
-        this.chapterEvents = new HashMap<>();
-        this.competitiveEvents = new HashMap<>();
+        this.farms = new HashMap<>();
+        this.reservoirs = new HashMap<>();
     }
 
     public String getName() {
         return name;
     }
 
-    public void setLastName(String name) {
+    public void setName(String name) {
         this.name = name;
     }
 
-    public Boolean getInChapter(){
-        return inChapter;
+
+    public HashMap<Integer, Integer> getFarms() {
+        return farms;
     }
 
-    public void setInChapter(Boolean inChapter){
-        this.inChapter = inChapter;
+    public void setFarms(HashMap<Integer, Integer> farms) {
+        this.farms = farms;
     }
 
-    public Boolean getIsAdmin(){
-        return isAdmin;
+    public HashMap<Integer, Integer> getReservoirs() {
+        return reservoirs;
     }
 
-    public void setIsAdmin(Boolean isAdmin){
-        this.isAdmin = isAdmin;
+    public void setReservoirs(HashMap<Integer, Integer> reservoirs) {
+        this.reservoirs = reservoirs;
     }
-
-    public String getChapterName() {
-        return chapterName;
-    }
-
-    public void setChapterName(String chapterName) {
-        this.chapterName = chapterName;
-    }
-
-    public HashMap<String, Integer> getChapterEvents() {
-        return chapterEvents;
-    }
-
-    public void setChapterEvents(HashMap<String, Integer> chapterEvents) {
-        this.chapterEvents = chapterEvents;
-    }
-
-    public HashMap<String, Integer> getCompetitiveEvents(){
-        return competitiveEvents;
-    }
-
-    public void setCompetitiveEvents(HashMap<String, Integer> competitiveEvents){
-        this.competitiveEvents = competitiveEvents;
-    }
-
 }
