@@ -17,7 +17,7 @@ import javax.annotation.Signed;
 
 
 public class ThisUser{
-
+/*
     private FirebaseFirestore fireStore;
 
     private static String uid;
@@ -91,6 +91,6 @@ public class ThisUser{
             thisActivity.startActivity(AuthUiActivity.createIntent(thisActivity.getApplicationContext()));
             thisActivity.finish();
         }
-    }
+    }*/
 }
 
