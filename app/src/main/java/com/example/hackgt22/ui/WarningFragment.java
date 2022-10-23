@@ -42,10 +42,10 @@ public class WarningFragment extends Fragment {
 
     };
     private int images[] = {
-            R.drawable.ic_baseline_warning_24,
+            R.drawable.ic_baseline_access_time_filled_24,
             R.drawable.ic_baseline_grass_24,
             R.drawable.ic_baseline_bug_report_24,
-            R.drawable.ic_baseline_help_24
+            R.drawable.ic_baseline_warning_24
     };
 
     private FragmentWarningBinding binding;

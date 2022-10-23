@@ -16,7 +16,7 @@ public class FarmFragment extends Fragment {
 
 
     FragmentFarmBinding binding;
-    
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {

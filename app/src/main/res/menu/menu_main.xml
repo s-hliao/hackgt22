@@ -7,4 +7,9 @@
         android:orderInCategory="100"
         android:title="Sign Out"
         app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_refresh"
+        android:title="@string/menu_refresh"
+        app:showAsAction="never" />
 </menu>

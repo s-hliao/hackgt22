@@ -1,5 +1,7 @@
 package com.example.hackgt22.model;
 
+import com.google.firebase.firestore.DocumentReference;
+
 public class Plant {
     public static final String FIELD_NAME = "name";
     public static final String FIELD_WATERINTENSITY = "waterIntensive";
@@ -11,10 +13,14 @@ public class Plant {
     private boolean waterIntensive;
     private boolean nutrientIntensive;
     private int growthTime;
-    private int pictureID;
+    private DocumentReference pictureID;
+
+    public Plant(){
+
+    }
 
 
-    public Plant(String name, boolean waterIntensive, boolean nutrientIntensive, int growthTime, int pictureID){
+    public Plant(String name, boolean waterIntensive, boolean nutrientIntensive, int growthTime, DocumentReference pictureID){
         this.name = name;
         this.waterIntensive = waterIntensive;
         this.nutrientIntensive = nutrientIntensive;
@@ -22,6 +28,7 @@ public class Plant {
         this.pictureID = pictureID;
 
     }
+
 
 
     public String getName() {
@@ -54,5 +61,14 @@ public class Plant {
 
     public void setGrowthTime(int growthTime) {
         this.growthTime = growthTime;
+    }
+
+
+    public DocumentReference getPictureID() {
+        return pictureID;
+    }
+
+    public void setPictureID(DocumentReference pictureID) {
+        this.pictureID = pictureID;
     }
 }

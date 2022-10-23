@@ -9,6 +9,9 @@ public class Farm {
     public static final String FIELD_NAME = "name";
     public static final String FIELD_PLANTROW1 = "plantRow1";
     public static final String FIELD_PLANTROW2 = "plantRow2";
+    public static final String FIELD_DATEROW1 = "dateRow1";
+    public static final String FIELD_DATEROW2 = "dateRow2";
+
     public static final String FIELD_WATERLEVEL = "waterLevel";
     public static final String FIELD_CONNECTEDRESERVOIR = "connectedReservoir";
     public static final String FIELD_FILTERDATE = "filterDate";
@@ -16,6 +19,8 @@ public class Farm {
     private String name;
     private int[] plantRow1;
     private int[] plantRow2;
+    private Date[] dateRow1;
+    private Date[] dateRow2;
     private Map<Date, Double> waterLevel;
     private int connectedReservoir;
     private Date filterDate;
