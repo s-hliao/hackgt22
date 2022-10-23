@@ -1,0 +1,47 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ContactUsActivity"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="@string/contact_us"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:textColor="@android:color/black"/>
+
+    <EditText
+        android:id="@+id/editText6"
+        android:layout_width="380dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:ems="10"
+        android:hint="Subject"
+        android:inputType="textPersonName" />
+
+    <EditText
+        android:id="@+id/editText5"
+        android:layout_width="380dp"
+        android:layout_height="253dp"
+        android:ems="10"
+        android:gravity="start|top"
+        android:layout_gravity="center"
+        android:hint="@string/AMA"
+        android:inputType="textMultiLine"
+        android:visibility="visible" />
+
+    <Button
+        android:id="@+id/button3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Send"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

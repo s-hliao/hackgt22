@@ -14,7 +14,7 @@
             android:title="@string/menu_stats" />
         <item
             android:id="@+id/nav_forum"
-            android:icon="@drawable/ic_baseline_chat_24"
+            android:icon="@drawable/ic_baseline_question_answer_24"
             android:title="@string/menu_forum" />
         <item
             android:id="@+id/nav_about_us"

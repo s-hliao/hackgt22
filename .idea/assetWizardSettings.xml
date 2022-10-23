@@ -134,8 +134,7 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="backgroundColor" value="ffffff" />
-                                      <entry key="foregroundAssetType" value="CLIP_ART" />
+                                      <entry key="outputName" value="com_facebook_profile_picture_blank_portrait" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -329,7 +328,7 @@
                                 <PersistentState>
                                   <option name="values">
                                     <map>
-                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/home/baseline_home_24.xml" />
+                                      <entry key="url" value="file:/$USER_HOME$/AppData/Local/Android/Sdk/icons/material/materialicons/text_snippet/baseline_text_snippet_24.xml" />
                                     </map>
                                   </option>
                                 </PersistentState>
@@ -340,7 +339,7 @@
                         <option name="values">
                           <map>
                             <entry key="color" value="498f47" />
-                            <entry key="outputName" value="ic_baseline_home_24" />
+                            <entry key="outputName" value="ic_baseline_text_snippet_24" />
                             <entry key="sourceFile" value="C:\Users\henry\Documents\hackgt22" />
                           </map>
                         </option>
