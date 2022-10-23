@@ -11,8 +11,6 @@ public class Reservoir {
     public static final String FIELD_WATERLEVEL = "waterLevel";
     public static final String FIELD_RESERVOIRS = "nutrientLevel";
 
-
-
     private String name;
     private int[]connectedFarms;
     private Map<Timestamp, Double> waterLevel;

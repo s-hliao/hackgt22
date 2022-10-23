@@ -11,8 +11,8 @@ public class DatabaseUser {
     public static final String FIELD_RESERVOIRS = "reservoirs";
 
     private String name;
-    private HashMap<Integer, Integer> farms;
-    private HashMap<Integer, Integer> reservoirs;
+    private HashMap<String, String> farms;
+    private HashMap<String, String> reservoirs;
 
     public DatabaseUser() {}
 
@@ -31,19 +31,19 @@ public class DatabaseUser {
     }
 
 
-    public HashMap<Integer, Integer> getFarms() {
+    public HashMap<String, String> getFarms() {
         return farms;
     }
 
-    public void setFarms(HashMap<Integer, Integer> farms) {
+    public void setFarms(HashMap<String, String> farms) {
         this.farms = farms;
     }
 
-    public HashMap<Integer, Integer> getReservoirs() {
+    public HashMap<String, String> getReservoirs() {
         return reservoirs;
     }
 
-    public void setReservoirs(HashMap<Integer, Integer> reservoirs) {
+    public void setReservoirs(HashMap<String, String> reservoirs) {
         this.reservoirs = reservoirs;
     }
 }

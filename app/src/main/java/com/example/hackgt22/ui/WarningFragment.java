@@ -35,10 +35,10 @@ public class WarningFragment extends Fragment {
             "Critical System Damage"
     };
     private String mDescription[] = {
-            "Replace Filter - Dirty or Malfunction",
-            "Nutrient Solution Low - Please Replace",
-            "Fruit Overripe - Avoid Spoilage and Pests",
-            "System Damage - Contact Customer Service Urgently"
+            "Replace filter on Farm 3 - Dirty or Malfunction",
+            "Nutrient solution low in Reservoir 1 - Please refill",
+            "Plant 5 on Farm 2 overripe - Avoid spoilage and pests",
+            "System damage - Contact customer service"
 
     };
     private int images[] = {
