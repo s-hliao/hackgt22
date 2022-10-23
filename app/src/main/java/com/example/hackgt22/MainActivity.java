@@ -1,12 +1,19 @@
 package com.example.hackgt22;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.Toast;
 
+import com.firebase.ui.auth.AuthUI;
+import com.google.android.gms.tasks.OnCompleteListener;
+import com.google.android.gms.tasks.Task;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.annotation.NonNull;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -52,8 +59,41 @@ public class MainActivity extends AppCompatActivity {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
+        getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+
+        int itemID = item.getItemId();
+
+        switch (itemID) {
+            case (R.id.action_signout):
+                signOut();
+                Toast.makeText(getApplicationContext(), "You have been successfully signed out."
+                        , Toast.LENGTH_SHORT).show();
+
+                break;
+        }
+
+
+        return super.onOptionsItemSelected(item);
+    }
+
+    private void signOut(){
+        AuthUI.getInstance()
+                .signOut(getApplicationContext())
+                .addOnCompleteListener(new OnCompleteListener<Void>() {
+
+                    // Show sign in screen
+                    @Override
+                    public void onComplete(@NonNull Task<Void> task) {
+                        if (task.isSuccessful()) {
+                            startActivity(new Intent(getApplicationContext(), AuthActivity.class));
+                        }
+                    }
+                });
     }
 
     @Override
@@ -62,4 +102,7 @@ public class MainActivity extends AppCompatActivity {
         return NavigationUI.navigateUp(navController, mAppBarConfiguration)
                 || super.onSupportNavigateUp();
     }
+
+
+
 }
