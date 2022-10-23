@@ -13,8 +13,10 @@ import com.google.android.material.snackbar.Snackbar;
 
 import androidx.activity.result.ActivityResultCallback;
 import androidx.activity.result.ActivityResultLauncher;
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.text.method.LinkMovementMethod;
 import android.view.View;
 
 import androidx.navigation.NavController;
@@ -33,10 +35,8 @@ import java.util.List;
 
 public class AuthActivity extends AppCompatActivity {
 
-    private AppBarConfiguration appBarConfiguration;
     private ActivityAuthBinding binding;
 
-    private NavController navController;
     private List<AuthUI.IdpConfig> providers;
 
     @Override
@@ -47,10 +47,8 @@ public class AuthActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
 
         setSupportActionBar(binding.toolbar);
-        NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager().findFragmentById(R.id.fragmentContainerView);
-        navController = navHostFragment.getNavController();
-        appBarConfiguration = new AppBarConfiguration.Builder(navController.getGraph()).build();
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration);
+
+        binding.termsOfUse.setMovementMethod(LinkMovementMethod.getInstance());
 
 
         providers = Arrays.asList(
@@ -62,9 +60,17 @@ public class AuthActivity extends AppCompatActivity {
         Intent signInIntent = AuthUI.getInstance()
                 .createSignInIntentBuilder()
                 .setAvailableProviders(providers)
+                .setTheme(R.style.GreenTheme)
                 .build();
-        signInLauncher.launch(signInIntent);
 
+
+
+        binding.buttonFirst.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                signInLauncher.launch(signInIntent);
+            }
+        });
 
 
     }
@@ -87,9 +93,4 @@ public class AuthActivity extends AppCompatActivity {
         }
     }
 
-    @Override
-    public boolean onSupportNavigateUp() {
-        return NavigationUI.navigateUp(navController, appBarConfiguration)
-                || super.onSupportNavigateUp();
-    }
 }

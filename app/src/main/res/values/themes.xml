@@ -10,8 +10,21 @@
         <item name="colorSecondaryVariant">@color/colorSecondary</item>
         <item name="colorOnSecondary">@color/defaultBackground</item>
         <!-- Status bar color. -->
+        <item name="backgroundColor">@color/defaultBackground</item>
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
         <!-- Customize your theme here. -->
+    </style>
+
+    <style name="GreenTheme" parent="FirebaseUI">
+        <!-- Required for sign-in flow styling -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
+        <item name="colorOnPrimary">@color/defaultBackground</item>
+        <!-- Secondary brand color.</it -->
+        <item name="colorSecondary">@color/colorSecondary</item>
+        <item name="colorSecondaryVariant">@color/colorSecondary</item>
+        <item name="colorOnSecondary">@color/defaultBackground</item>
+        <item name="android:windowBackground">@color/defaultBackground</item>
     </style>
 
     <style name="Theme.Hackgt22.NoActionBar">

@@ -21,13 +21,70 @@
 
     </com.google.android.material.appbar.AppBarLayout>
 
-    <androidx.fragment.app.FragmentContainerView
-        android:id="@+id/fragmentContainerView"
-        android:name="androidx.navigation.fragment.NavHostFragment"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        app:defaultNavHost="true"
-        app:navGraph="@navigation/nav_graph2" />
+        android:orientation="vertical">
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5" />
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:cropToPadding="false"
+            android:maxWidth="200dp"
+            android:maxHeight="200dp"
+            android:minWidth="200dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="15dp"
+            android:src="@drawable/ic_baseline_grass_24" />
+
+        <TextView
+            android:id="@+id/textview_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_weight=".1"
+            android:paddingTop="25dp"
+            android:paddingBottom="25dp"
+            android:text="@string/landing_text"
+            android:textAlignment="center"
+            android:textSize="34sp" />
+
+        <TextView
+            android:id="@+id/terms_of_use"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_vertical"
+            android:layout_weight=".1"
+            android:text="@string/TOU_txt"
+            android:textAlignment="center"
+            android:textSize="12sp"
+            app:autoSizeTextType="none" />
+
+        <Button
+            android:id="@+id/button_first"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|center_vertical"
+            android:layout_weight=".1"
+            android:gravity="center|center_horizontal|center_vertical"
+            android:text="@string/sign_in_button_txt"
+            android:textColor="#FFFFFF" />
+
+        <Space
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:paddingBottom="200dp" />
+
+    </LinearLayout>
 
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

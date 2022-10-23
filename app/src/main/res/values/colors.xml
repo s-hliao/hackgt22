@@ -8,5 +8,5 @@
     <color name="colorSecondaryTint">#8BC59E8C</color>
     <color name="defaultBackground">#FFFAFAFA</color>
     <color name="grey">#979797</color>
-    <color name="colorOn">#000000</color>
+    <color name="colorOn">#FFFFFF</color>
 </resources>
