@@ -10,11 +10,11 @@ public class Plant {
     private String name;
     private boolean waterIntensive;
     private boolean nutrientIntensive;
-    private double growthTime;
+    private int growthTime;
     private int pictureID;
 
 
-    public Plant(String name, boolean waterIntensive, boolean nutrientIntensive, double growthTime, int pictureID){
+    public Plant(String name, boolean waterIntensive, boolean nutrientIntensive, int growthTime, int pictureID){
         this.name = name;
         this.waterIntensive = waterIntensive;
         this.nutrientIntensive = nutrientIntensive;
@@ -48,11 +48,11 @@ public class Plant {
         this.nutrientIntensive = nutrientIntensive;
     }
 
-    public double getGrowthTime() {
+    public int getGrowthTime() {
         return growthTime;
     }
 
-    public void setGrowthTime(double growthTime) {
+    public void setGrowthTime(int growthTime) {
         this.growthTime = growthTime;
     }
 }
