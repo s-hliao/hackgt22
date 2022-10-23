@@ -17,7 +17,9 @@ import androidx.viewpager.widget.PagerAdapter;
 
 import com.example.hackgt22.R;
 import com.example.hackgt22.adapter.PlantPagerAdapter;
+import com.example.hackgt22.adapter.StatsPagerAdapter;
 import com.example.hackgt22.databinding.FragmentHomeBinding;
+import com.example.hackgt22.databinding.FragmentStatsBinding;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.google.android.material.navigation.NavigationView;
 import com.google.android.material.tabs.TabLayout;
@@ -25,13 +27,13 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class StatsFragment extends Fragment {
 
-    private FragmentHomeBinding binding;
+    private FragmentStatsBinding binding;
     private AppBarConfiguration mAppBarConfiguration;
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
-        binding = FragmentHomeBinding.inflate(inflater, container, false);
+        binding = FragmentStatsBinding.inflate(inflater, container, false);
         View root = binding.getRoot();
 
         PagerAdapter pagerAdapter = new StatsPagerAdapter(getChildFragmentManager());
