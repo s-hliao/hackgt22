@@ -73,8 +73,10 @@ public class ThisUser{
                         // If the user doesn't exist in firebase
                         if (!document.exists()) {
                             usersCollection.document(user.getUid()).set(new DatabaseUser(
-                                    user.getDisplayName()
+                                    displayName = user.getDisplayName()
                             ));
+
+                        } else{
 
                         }
 

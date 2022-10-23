@@ -5,8 +5,10 @@ import android.os.Bundle;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.Menu;
+import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.hackgt22.util.ThisUser;
 import com.firebase.ui.auth.AuthUI;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -22,6 +24,7 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hackgt22.databinding.ActivityMainBinding;
+import com.google.firebase.auth.FirebaseAuth;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -46,11 +49,16 @@ public class MainActivity extends AppCompatActivity {
         DrawerLayout drawer = binding.drawerLayout;
         NavigationView navigationView = binding.navView;
         // Passing each menu ID as a set of Ids because each
-        // menu should be considered as top level destinations.
+        // menu should be considered as top level destinations
+
         mAppBarConfiguration = new AppBarConfiguration.Builder(
-                R.id.nav_home, R.id.nav_gallery, R.id.nav_slideshow)
+                R.id.nav_home, R.id.nav_stats, R.id.nav_forum, R.id.nav_about_us, R.id.nav_help)
                 .setOpenableLayout(drawer)
                 .build();
+        ((TextView)binding.navView.getHeaderView(0).findViewById(R.id.main_header))
+                .setText(FirebaseAuth.getInstance().getCurrentUser().getDisplayName());;
+        ((TextView)binding.navView.getHeaderView(0).findViewById(R.id.sub_header))
+                .setText(FirebaseAuth.getInstance().getCurrentUser().getEmail());
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment_content_main);
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
