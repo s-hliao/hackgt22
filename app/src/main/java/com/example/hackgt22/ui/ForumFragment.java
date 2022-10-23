@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import com.example.hackgt22.R;
+import com.example.hackgt22.databinding.FragmentForumBinding;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -16,6 +17,7 @@ import com.example.hackgt22.R;
  * create an instance of this fragment.
  */
 public class ForumFragment extends Fragment {
+    FragmentForumBinding binding;
 
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER

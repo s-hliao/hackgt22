@@ -28,6 +28,12 @@
     <string name="menu_about_us">About Us</string>
     <string name="menu_help">Help</string>
 
+    <string name="menu_plant_grid">Plant Grid</string>
+    <string name="menu_plant_info">Plant Info</string>
+    <string name="menu_warning">Warning</string>
+    <string name="menu_reservoir">Reservoir</string>
+    <string name="menu_farm">Farm</string>
+
     <string name="AMA">Ask us anything.</string>
     <string name="contact_us">Contact Us</string>>
 

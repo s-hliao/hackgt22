@@ -5,18 +5,21 @@ public class Plant {
     public static final String FIELD_WATERINTENSITY = "waterIntensive";
     public static final String FIELD_NUTRIENTINTENSITY = "nutrientIntensive";
     public static final String FIELD_GROWTHTIME = "growthTime";
+    public static final String FIELD_PICTUREID = "pictureID";
 
     private String name;
     private boolean waterIntensive;
     private boolean nutrientIntensive;
     private double growthTime;
+    private int pictureID;
 
 
-    public Plant(String name, boolean waterIntensive, boolean nutrientIntensive, double growthTime){
+    public Plant(String name, boolean waterIntensive, boolean nutrientIntensive, double growthTime, int pictureID){
         this.name = name;
         this.waterIntensive = waterIntensive;
         this.nutrientIntensive = nutrientIntensive;
         this.growthTime = growthTime;
+        this.pictureID = pictureID;
 
     }
 

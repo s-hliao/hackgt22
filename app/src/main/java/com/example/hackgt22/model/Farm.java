@@ -1,6 +1,5 @@
 package com.example.hackgt22.model;
 import com.google.firebase.Timestamp;
-import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.Date;
 import java.util.HashMap;
@@ -12,20 +11,23 @@ public class Farm {
     public static final String FIELD_PLANTROW2 = "plantRow2";
     public static final String FIELD_WATERLEVEL = "waterLevel";
     public static final String FIELD_CONNECTEDRESERVOIR = "connectedReservoir";
+    public static final String FIELD_FILTERDATE = "filterDate";
 
     private String name;
     private int[] plantRow1;
     private int[] plantRow2;
-    private Map<Timestamp, Double> waterLevel;
+    private Map<Date, Double> waterLevel;
     private int connectedReservoir;
+    private Date filterDate;
 
 
-    public Farm(String name, int connectedReservoir) {
+    public Farm(String name, int connectedReservoir, Date filterDate) {
         this.name=  name;
         plantRow1 = new int[5];
         plantRow2 = new int[5];
         waterLevel = new HashMap<>();
         this.connectedReservoir = connectedReservoir;
+        this.filterDate = filterDate;
 
     }
 
@@ -45,11 +47,11 @@ public class Farm {
         this.plantRow2 = plantRow2;
     }
 
-    public Map<Timestamp, Double> getWaterLevel() {
+    public Map<Date, Double> getWaterLevel() {
         return waterLevel;
     }
 
-    public void setWaterLevel(Map<Timestamp, Double> waterLevel) {
+    public void setWaterLevel(Map<Date, Double> waterLevel) {
         this.waterLevel = waterLevel;
     }
 
@@ -67,6 +69,14 @@ public class Farm {
 
     public void setName(String name) {
         this.name = name;
+    }
+
+    public Date getFilterDate() {
+        return filterDate;
+    }
+
+    public void setFilterDate(Date filterDate) {
+        this.filterDate = filterDate;
     }
 }
 
