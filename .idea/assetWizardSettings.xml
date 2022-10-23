@@ -102,6 +102,9 @@
                                             <option name="values">
                                               <map>
                                                 <entry key="color" value="000000" />
+                                                <entry key="imagePath" value="C:\Users\henry\Documents\instagram_logo.png" />
+                                                <entry key="scalingPercent" value="72" />
+                                                <entry key="trimmed" value="true" />
                                               </map>
                                             </option>
                                           </PersistentState>
@@ -134,7 +137,8 @@
                                   <option name="values">
                                     <map>
                                       <entry key="backgroundAssetType" value="COLOR" />
-                                      <entry key="outputName" value="com_facebook_profile_picture_blank_portrait" />
+                                      <entry key="backgroundColor" value="ffffff" />
+                                      <entry key="outputName" value="instagram_logo" />
                                     </map>
                                   </option>
                                 </PersistentState>
